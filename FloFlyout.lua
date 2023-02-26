@@ -1179,9 +1179,9 @@ function FloFlyoutConfigButton_OnDragStart(self)
 	end
 end
 
-local NUM_FLYOUT_ICONS_SHOWN = 15
-local NUM_FLYOUT_ICONS_PER_ROW = 5
-local NUM_FLYOUT_ICON_ROWS = 3
+local NUM_FLYOUT_ICONS_SHOWN = 100--15
+local NUM_FLYOUT_ICONS_PER_ROW = 10 --5
+local NUM_FLYOUT_ICON_ROWS = 10 --3
 local FLYOUT_ICON_ROW_HEIGHT = 36
 local FC_ICON_FILENAMES = {}
 
