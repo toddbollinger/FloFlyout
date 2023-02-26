@@ -353,7 +353,7 @@
 	</Frame>
 
 	<Frame name="FloFlyoutConfigDialogPopup" hidden="true" parent="FloFlyoutConfig">
-		<Size x="297" y="206"/>
+		<Size x="525" y="515"/>
 		<Anchors>
 			<Anchor point="LEFT" relativePoint="RIGHT"/>
 		</Anchors>
@@ -362,7 +362,7 @@
 				<Texture name="$parentBg" parentKey="Bg">
 					<Anchors>
 						<Anchor point="TOPLEFT"  x="10" y="-10"/>
-						<Anchor point="BOTTOMRIGHT"  x="-10" y="42"/>
+						<Anchor point="BOTTOMRIGHT"  x="-10" y="10"/>
 					</Anchors>
 					<Color r="0" g="0" b="0" a="0.65"/>
 				</Texture>
@@ -382,26 +382,30 @@
 						</Anchor>
 					</Anchors>
 				</Texture>
+				<Texture name="$parentBottomLeftCorner" inherits="Dialog-BorderBottomLeft">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset x="1" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture name="$parentBottomRightCorner" inherits="Dialog-BorderBottomRight">
+					<Anchors>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset x="-1" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Texture>
 				<Texture name="$parentTopBorder" inherits="Dialog-BorderTop">
 					<Anchors>
 						<Anchor point="TOPLEFT" relativeTo="$parentTopLeftCorner" relativePoint="TOPRIGHT"  x="0" y="-1"/>
 						<Anchor point="TOPRIGHT" relativeTo="$parentTopRightCorner" relativePoint="TOPLEFT"  x="0" y="-1"/>
 					</Anchors>
 				</Texture>
-				<Texture name="$parentBottomLeftCorner" file="Interface\MacroFrame\MacroPopup-BotLeft">
-					<Size x="256" y="64"/>
+				<Texture name="$parentBottomBorder" inherits="Dialog-BorderBottom">
 					<Anchors>
-						<Anchor point="TOPLEFT">
-							<Offset x="0" y="-164"/>
-						</Anchor>
-					</Anchors>
-				</Texture>
-				<Texture name="$parentBottomRightCorner" file="Interface\MacroFrame\MacroPopup-BotRight">
-					<Size x="64" y="64"/>
-					<Anchors>
-						<Anchor point="TOPLEFT">
-							<Offset x="256" y="-164"/>
-						</Anchor>
+						<Anchor point="BOTTOMLEFT" relativeTo="$parentBottomLeftCorner" relativePoint="BOTTOMRIGHT"  x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativeTo="$parentBottomRightCorner" relativePoint="BOTTOMLEFT"  x="0" y="0"/>
 					</Anchors>
 				</Texture>
 				<Texture name="$parentLeftBorder" inherits="Dialog-BorderLeft">
@@ -430,7 +434,7 @@
 		<Frames>
 			<ScrollFrame name="$parentScrollFrame" inherits="FauxScrollFrameTemplate">
 				<Size>
-					<AbsDimension x="296" y="151"/>
+					<AbsDimension x="596" y="151"/>
 				</Size>
 				<Anchors>
 					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT">
