@@ -443,6 +443,8 @@ local function Opener_UpdateFlyout(self)
 		flyoutArrowTexture:SetPoint("TOP", self, "TOP", 0, arrowDistance);
 		SetClampedTextureRotation(flyoutArrowTexture, 0);
 	end
+	self.SlotArt:Hide()
+	self.NormalTexture:Hide()
 end
 
 local function Opener_PreClick(self, button, down)
@@ -644,6 +646,10 @@ function FloFlyout:CreateOpener(name, idFlyout, actionId, direction, actionButto
 	opener:SetAttribute("_onclick", snippet_Opener_Click)
 	opener:RegisterForClicks("AnyUp")
 	opener:RegisterForDrag("LeftButton")
+
+	opener.SlotArt:Hide()
+	opener.NormalTexture:Hide()
+	
 
 	local icon = _G[opener:GetName().."Icon"]
 	if flyoutConf.icon then
